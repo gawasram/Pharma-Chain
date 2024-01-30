@@ -64,7 +64,7 @@ contract SupplyChain is Supplier, Transporter, Manufacturer, Wholesaler, Distrib
     
     mapping (address => userData) public userInfo;
     
-    function registerUser(bytes32 name, string[] memory loc, uint role, address _userAddr) external onlyOwner {
+function registerUser(bytes32 name, string[] calldata loc, uint role, address _userAddr) external onlyOwner {
         userInfo[_userAddr].name = name;
         userInfo[_userAddr].userLoc = loc;
         userInfo[_userAddr].role = roles(role);

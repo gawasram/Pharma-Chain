@@ -2,7 +2,8 @@ import 'dotenv/config';
 import app from './app';
 import { initContract } from './config/contracts.config';
 
-app.listen(process.env.PORT, async () => {
+const port = 8080;
+app.listen(port, async () => {
     await initContract();
-    console.log(`Server up on port ${process.env.PORT}!`);
+    console.log(`Server up on port ${port}!`);
 });

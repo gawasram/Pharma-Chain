@@ -72,14 +72,14 @@ class App extends Component {
       'account': null,
       'supplyChain': null,
       'identicon': null,
-      'loading': true,
+      'loading': false, //true
       'web3': null,
     }
   }
 
   async componentWillMount() {
-    this.loadWeb3()
-    this.loadBlockChain()
+    // this.loadWeb3()
+    // this.loadBlockChain()
   }
 
   async loadWeb3() {
